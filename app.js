@@ -3,6 +3,9 @@ const rotaLivro = require('./rotas/livro')
 
 const app = express()
 
+// Para aceitar requisições com JSON no body
+app.use(express.json())
+
 app.use('/livros', rotaLivro)
 
 const port = 8000
